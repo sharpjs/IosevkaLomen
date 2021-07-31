@@ -1,0 +1,151 @@
+# Iosevka 'Lomen' variant: Iosevka in Menlo style with some tweaks
+#
+# SPDX-License-Identifier: CC0-1.0
+#
+# To the extent possible under law, Jeffrey Sharp has waived all copyright and
+# related or neighbouring rights to this file.  This file is published from
+# Canada.
+#
+# Fonts built by this file are derivatives of Iosevka and are licensed under
+# the SIL Open Font License v1.1.  For more information, see:
+# https://github.com/be5invis/Iosevka/blob/master/LICENSE.md
+#
+# References:
+# - customizer: https://typeof.net/Iosevka/customizer
+# - example:    https://github.com/be5invis/Iosevka/blob/master/private-build-plans.sample.toml
+# - via npm:    npm run build -- ttf::iosevka-lomen
+# - via docker: docker run -it -v $(pwd):/build avivace/iosevka-build ttf::iosevka-lomen
+
+[buildPlans.iosevka-lomen]
+family   = "Iosevka Lomen"
+spacing  = "term"
+serifs   = "sans"
+no-cv-ss = true
+
+# -----------------------------------------------------------------------------
+# Glyph Variants
+#
+# Like SS04 (Menlo style) with a few tweaks.
+#
+
+[buildPlans.iosevka-lomen.variants]
+inherits        = "ss04"                        # Menlo style
+
+[buildPlans.iosevka-lomen.variants.design]
+# Punctuation
+number-sign     = "upright"                     # # is not slanted
+percent         = "rings-segmented-slash"       # % has split bar
+punctuation-dot = "round"                       # . is round
+underscore      = "high"                        # _ is higher
+# Numbers
+one             = "nobase"
+six             = "straight-bar"
+eight           = "crossing-asymmetric"
+nine            = "straight-bar"
+
+# -----------------------------------------------------------------------------
+# Ligations
+#
+# Enable ligations for C-like languages, plus a few more.
+#
+
+[buildPlans.iosevka-lomen.ligations]
+inherits = "clike"
+enables  = [
+    "connected-hyphen-as-semi-dashed-line",     # -- => semi-dashed line
+    "connected-underscore",                     # __ => solid line
+    "ltgt-diamond",                             # <> => diamond
+]
+
+# -----------------------------------------------------------------------------
+# Slopes
+#
+# Build the normal and italic slopes only.
+#
+# angle: angle in degrees                       ( 0.0 ..= 15.0  )
+# shape: shape of the glyphs                    ( upright | italic | oblique )
+# menu:  font name                              ( upright | italic | oblique )
+# css:   webfont CSS 'font-style' property      ( normal  | italic | oblique )
+
+[buildPlans.iosevka-lomen.slopes.upright]
+angle = 0
+shape = "upright"
+menu  = "upright"
+css   = "normal"
+
+[buildPlans.iosevka-lomen.slopes.italic]
+angle = 9.4
+shape = "italic"
+menu  = "italic"
+css   = "italic"
+
+# -----------------------------------------------------------------------------
+# Widths
+#
+# Build the extended width only.
+#
+# shape: unit width in 1/1000 em                ( 434 ..= 664 )
+# menu:  font name                              (   1 ..=   9 )
+# css:   webfont CSS 'font-stretch' property    ( string      )
+#
+
+[buildPlans.iosevka-lomen.widths.normal]
+shape = 600
+menu  = 5
+css   = "normal"
+
+# -----------------------------------------------------------------------------
+# Weights
+#
+# Make thin to regular weights appear one step (100 units) heaver than normal.
+# Evenly redistribute medium to heavy weights; each step becomes 80 units.
+#
+# shape: shape of the glyphs                    ( 100 ..=  900 )
+# menu:  font name                              (   0 ..  1000 )
+# css:   webfont CSS 'font-weight' property     (   0 ..  1000 )
+#
+
+[buildPlans.iosevka-lomen.weights.thin]
+shape = 200
+menu  = 100
+css   = 100
+
+[buildPlans.iosevka-lomen.weights.extralight]
+shape = 300
+menu  = 200
+css   = 200
+
+[buildPlans.iosevka-lomen.weights.light]
+shape = 400
+menu  = 300
+css   = 300
+
+[buildPlans.iosevka-lomen.weights.regular]
+shape = 500
+menu  = 400
+css   = 400
+
+[buildPlans.iosevka-lomen.weights.medium]
+shape = 580
+menu  = 500
+css   = 500
+
+[buildPlans.iosevka-lomen.weights.semibold]
+shape = 660
+menu  = 600
+css   = 600
+
+[buildPlans.iosevka-lomen.weights.bold]
+shape = 740
+menu  = 700
+css   = 700
+
+[buildPlans.iosevka-lomen.weights.extrabold]
+shape = 820
+menu  = 800
+css   = 800
+
+[buildPlans.iosevka-lomen.weights.heavy]
+shape = 900
+menu  = 900
+css   = 900

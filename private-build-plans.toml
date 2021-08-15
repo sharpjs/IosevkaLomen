@@ -38,7 +38,7 @@ percent         = "rings-segmented-slash"       # % has split bar
 punctuation-dot = "round"                       # . is round
 underscore      = "high"                        # _ is higher
 # Numbers
-one             = "nobase"
+one             = "no-base"
 six             = "straight-bar"
 eight           = "crossing-asymmetric"
 nine            = "straight-bar"

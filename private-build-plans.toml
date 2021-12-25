@@ -14,7 +14,9 @@
 # - customizer: https://typeof.net/Iosevka/customizer
 # - example:    https://github.com/be5invis/Iosevka/blob/master/private-build-plans.sample.toml
 # - via npm:    npm run build -- ttf::iosevka-lomen
-# - via docker: docker run -it -v $(pwd):/build avivace/iosevka-build ttf::iosevka-lomen
+# - via docker:
+#   - *nix:     docker run --rm -it -v $(pwd):/build avivace/iosevka-build ttf::iosevka-lomen
+#   - windows:  docker run --rm -it -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-lomen
 
 [buildPlans.iosevka-lomen]
 family   = "Iosevka Lomen"

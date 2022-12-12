@@ -15,8 +15,8 @@
 # - example:    https://github.com/be5invis/Iosevka/blob/master/private-build-plans.sample.toml
 # - via npm:    npm run build -- ttf::iosevka-sharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -e FONT_VERSION=16.3.6 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
-#   - windows:  docker run --rm -it -e FONT_VERSION=16.3.6 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - *nix:     docker run --rm -it -e FONT_VERSION=16.7.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - windows:  docker run --rm -it -e FONT_VERSION=16.7.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
 #
 # Notes:
 # - As of current writing, the FONT_VERSION environment variable is required to
@@ -54,6 +54,9 @@ brace          = "straight"
 
 [buildPlans.iosevka-sharpie.ligations]
 inherits = "clike"
+disables = [
+    "slash-asterisk"                            # shifted asterisk in /* and */
+]
 enables  = [
     "connected-hyphen-as-semi-dashed-line",     # -- => semi-dashed line
     "connected-underscore",                     # __ => solid line

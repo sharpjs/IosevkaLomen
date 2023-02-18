@@ -8,15 +8,16 @@
 #
 # Fonts built by this file are derivatives of Iosevka and are licensed under
 # the SIL Open Font License v1.1.  For more information, see:
-# https://github.com/be5invis/Iosevka/blob/master/LICENSE.md
+# https://github.com/be5invis/Iosevka/blob/main/LICENSE.md
 #
 # References:
+# - reference:  https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md
+# - example:    https://github.com/be5invis/Iosevka/blob/main/private-build-plans.sample.toml
 # - customizer: https://typeof.net/Iosevka/customizer
-# - example:    https://github.com/be5invis/Iosevka/blob/master/private-build-plans.sample.toml
 # - via npm:    npm run build -- ttf::iosevka-sharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -e FONT_VERSION=16.7.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
-#   - windows:  docker run --rm -it -e FONT_VERSION=16.7.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - *nix:     docker run --rm -it -e FONT_VERSION=19.0.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - windows:  docker run --rm -it -e FONT_VERSION=19.0.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
 #
 # Notes:
 # - As of current writing, the FONT_VERSION environment variable is required to
@@ -58,7 +59,7 @@ disables = [
     "slash-asterisk"                            # shifted asterisk in /* and */
 ]
 enables  = [
-    "connected-hyphen-as-semi-dashed-line",     # -- => semi-dashed line
+    "connected-hyphen",                         # -- => semi-dashed line
     "connected-underscore",                     # __ => solid line
     "ltgt-diamond",                             # <> => diamond
 ]

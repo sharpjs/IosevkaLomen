@@ -12,12 +12,13 @@
 #
 # References:
 # - reference:  https://github.com/be5invis/Iosevka/blob/main/doc/custom-build.md
+# - ligations:  https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
 # - example:    https://github.com/be5invis/Iosevka/blob/main/private-build-plans.sample.toml
 # - customizer: https://typeof.net/Iosevka/customizer
 # - via npm:    npm run build -- ttf::iosevka-sharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -e FONT_VERSION=19.0.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
-#   - windows:  docker run --rm -it -e FONT_VERSION=19.0.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - *nix:     docker run --rm -it -e FONT_VERSION=20.0.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - windows:  docker run --rm -it -e FONT_VERSION=20.0.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
 #
 # Notes:
 # - As of current writing, the FONT_VERSION environment variable is required to
@@ -54,14 +55,15 @@ brace          = "straight"
 #
 
 [buildPlans.iosevka-sharpie.ligations]
-inherits = "clike"
+inherits = "julia"                              # clike plus arrows galore
 disables = [
     "slash-asterisk"                            # shifted asterisk in /* and */
 ]
 enables  = [
-    "connected-hyphen",                         # -- => semi-dashed line
-    "connected-underscore",                     # __ => solid line
-    "ltgt-diamond",                             # <> => diamond
+    "connected-hyphen",                         # --   => semi-dashed line
+    "connected-underscore",                     # __   => solid line
+    "ltgt-diamond",                             # <>   => diamond
+    "html-comment",                             # <!-- => bang over arrow
 ]
 
 # -----------------------------------------------------------------------------

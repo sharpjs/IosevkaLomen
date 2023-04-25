@@ -17,12 +17,10 @@
 # - customizer: https://typeof.net/Iosevka/customizer
 # - via npm:    npm run build -- ttf::iosevka-sharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -e FONT_VERSION=22.0.2 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
-#   - windows:  docker run --rm -it -e FONT_VERSION=22.0.2 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - *nix:     docker run --rm -it -e FONT_VERSION=22.1.0 -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - windows:  docker run --rm -it -e FONT_VERSION=22.1.0 -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
 #
 # Notes:
-# - As of current writing, the FONT_VERSION environment variable is required to
-#   make avivace/iosevka-build not crash out.
 # - On SELinux-enabled distros like Fedora, use `-v $(pwd):/build:Z` to avoid a
 #   permissions error.
 

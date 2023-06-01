@@ -39,9 +39,12 @@ no-cv-ss = true
 
 [buildPlans.iosevka-sharpie.variants.design]
 # Letters
-y              = "straight-turn"
+y              = "straight-turn-serifless"
+cyrl-capital-u = "straight-turn-serifless"
 lower-lambda   = "straight-turn"
-cyrl-capital-u = "straight-turn"
+
+# Digits
+zero           = 'tall-slashed'
 
 # Punctuation
 asterisk       = "hex-low"

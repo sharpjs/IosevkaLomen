@@ -1,4 +1,5 @@
 # Iosevka 'Sharpie' variant: Iosevka with a few tweaks by Jeffrey Sharp
+# For Iosevka >= 28.0.0
 #
 # SPDX-License-Identifier: CC0-1.0
 #
@@ -15,21 +16,21 @@
 # - ligations:  https://github.com/be5invis/Iosevka/blob/main/doc/language-specific-ligation-sets.md
 # - example:    https://github.com/be5invis/Iosevka/blob/main/private-build-plans.sample.toml
 # - customizer: https://typeof.net/Iosevka/customizer
-# - via npm:    npm run build -- ttf::iosevka-sharpie
+# - via npm:    npm run build -- ttf::IosevkaSharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -v $(pwd):/build avivace/iosevka-build ttf::iosevka-sharpie
-#   - windows:  docker run --rm -it -v ${PWD}:/build avivace/iosevka-build ttf::iosevka-sharpie
+#   - *nix:     docker run --rm -it -v $(pwd):/build avivace/iosevka-build ttf::IosevkaSharpie
+#   - windows:  docker run --rm -it -v ${PWD}:/build avivace/iosevka-build ttf::IosevkaSharpie
 #
 # Notes:
 # - On SELinux-enabled distros like Fedora, use `-v $(pwd):/build:Z` to avoid a
 #   permissions error.
 # - Add -e FONT_VERSION=x.y.z to build a specific version.
 
-[buildPlans.iosevka-sharpie]
-family   = "Iosevka Sharpie"
-spacing  = "term"
-serifs   = "sans"
-no-cv-ss = true
+[buildPlans.IosevkaSharpie]
+family  = "Iosevka Sharpie"
+spacing = "term"
+serifs  = "sans"
+noCvSs  = true
 
 # -----------------------------------------------------------------------------
 # Glyph Variants
@@ -37,7 +38,7 @@ no-cv-ss = true
 # Use default Iosevka with just a few tweaks.
 #
 
-[buildPlans.iosevka-sharpie.variants.design]
+[buildPlans.IosevkaSharpie.variants.design]
 # Letters
 y              = "straight-turn-serifless"
 cyrl-capital-u = "straight-turn-serifless"
@@ -56,15 +57,15 @@ brace          = "straight"
 # Enable ligations for C-like languages, plus a few more.
 #
 
-[buildPlans.iosevka-sharpie.ligations]
+[buildPlans.IosevkaSharpie.ligations]
 inherits = "julia"                              # clike plus arrows galore
 disables = [
     "center-op-influence-dot"                   # centered dot in op chains
 ]
 enables = [
-    "connected-hyphen",                         # --   => semi-dashed line
-    "connected-underscore",                     # __   => solid line
-    "connected-tilde-as-wave",                  # ~~   => wavy line
+    "minus-minus",                              # --   => semi-dashed line
+    "underscore-underscopre",                   # __   => solid line
+    "tilde-tilde",                              # ~~   => wavy line
     "ltgt-diamond",                             # <>   => diamond
     "html-comment",                             # <!-- => bang over arrow
 ]
@@ -79,13 +80,13 @@ enables = [
 # menu:  font name                              ( upright | italic | oblique )
 # css:   webfont CSS 'font-style' property      ( normal  | italic | oblique )
 
-[buildPlans.iosevka-sharpie.slopes.upright]
+[buildPlans.IosevkaSharpie.slopes.upright]
 angle = 0
 shape = "upright"
 menu  = "upright"
 css   = "normal"
 
-[buildPlans.iosevka-sharpie.slopes.italic]
+[buildPlans.IosevkaSharpie.slopes.italic]
 angle = 9.4
 shape = "italic"
 menu  = "italic"
@@ -101,7 +102,7 @@ css   = "italic"
 # css:   webfont CSS 'font-stretch' property    ( string      )
 #
 
-[buildPlans.iosevka-sharpie.widths.normal]
+[buildPlans.IosevkaSharpie.widths.normal]
 shape = 600
 menu  = 5
 css   = "normal"
@@ -116,47 +117,47 @@ css   = "normal"
 # css:   webfont CSS 'font-weight' property     (   0 ..  1000 )
 #
 
-[buildPlans.iosevka-sharpie.weights.thin]
+[buildPlans.IosevkaSharpie.weights.thin]
 shape = 150
 menu  = 100
 css   = 100
 
-[buildPlans.iosevka-sharpie.weights.extralight]
+[buildPlans.IosevkaSharpie.weights.extralight]
 shape = 250
 menu  = 200
 css   = 200
 
-[buildPlans.iosevka-sharpie.weights.light]
+[buildPlans.IosevkaSharpie.weights.light]
 shape = 350
 menu  = 300
 css   = 300
 
-[buildPlans.iosevka-sharpie.weights.regular]
+[buildPlans.IosevkaSharpie.weights.regular]
 shape = 450
 menu  = 400
 css   = 400
 
-[buildPlans.iosevka-sharpie.weights.medium]
+[buildPlans.IosevkaSharpie.weights.medium]
 shape = 540
 menu  = 500
 css   = 500
 
-[buildPlans.iosevka-sharpie.weights.semibold]
+[buildPlans.IosevkaSharpie.weights.semibold]
 shape = 630
 menu  = 600
 css   = 600
 
-[buildPlans.iosevka-sharpie.weights.bold]
+[buildPlans.IosevkaSharpie.weights.bold]
 shape = 720
 menu  = 700
 css   = 700
 
-[buildPlans.iosevka-sharpie.weights.extrabold]
+[buildPlans.IosevkaSharpie.weights.extrabold]
 shape = 810
 menu  = 800
 css   = 800
 
-[buildPlans.iosevka-sharpie.weights.heavy]
+[buildPlans.IosevkaSharpie.weights.heavy]
 shape = 900
 menu  = 900
 css   = 900

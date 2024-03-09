@@ -18,13 +18,15 @@
 # - customizer: https://typeof.net/Iosevka/customizer
 # - via npm:    npm run build -- ttf::IosevkaSharpie
 # - via docker:
-#   - *nix:     docker run --rm -it -v $(pwd):/build avivace/iosevka-build ttf::IosevkaSharpie
-#   - windows:  docker run --rm -it -v ${PWD}:/build avivace/iosevka-build ttf::IosevkaSharpie
+#   - Build fontcc image: https://github.com/be5invis/Iosevka/blob/main/docker/README.md
+#   - *nix:    docker run --rm -it -v $(pwd):/work fontcc ttf::IosevkaSharpie
+#   - windows: docker run --rm -it -v ${PWD}:/work fontcc ttf::IosevkaSharpie
+#     NOTE: As of 2024-03-09, autocrlf=false is required to avoid build failure.
 #
 # Notes:
-# - On SELinux-enabled distros like Fedora, use `-v $(pwd):/build:Z` to avoid a
+# - On SELinux-enabled distros like Fedora, use `-v $(pwd):/work:Z` to avoid a
 #   permissions error.
-# - Add -e FONT_VERSION=x.y.z to build a specific version.
+# - Add -e VERSION_TAG=vX.Y.Z to build a specific version.
 
 [buildPlans.IosevkaSharpie]
 family  = "Iosevka Sharpie"

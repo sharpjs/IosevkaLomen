@@ -1,2 +1,3 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.0">
+  <!-- https://wixtoolset.org/docs/tools/msbuild/ -->
 </Project>

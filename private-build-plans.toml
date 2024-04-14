@@ -19,14 +19,8 @@
 # - via npm:    npm run build -- ttf::IosevkaSharpie
 # - via docker:
 #   - Build fontcc image: https://github.com/be5invis/Iosevka/blob/main/docker/README.md
-#   - *nix:    docker run --rm -it -v $(pwd):/work fontcc ttf::IosevkaSharpie
-#   - windows: docker run --rm -it -v ${PWD}:/work fontcc ttf::IosevkaSharpie
-#     NOTE: As of 2024-03-09, autocrlf=false is required to avoid build failure.
-#
-# Notes:
-# - On SELinux-enabled distros like Fedora, use `-v $(pwd):/work:Z` to avoid a
-#   permissions error.
-# - Add -e VERSION_TAG=vX.Y.Z to build a specific version.
+#   - Run: docker run --rm -it -v .:/work:Z fontcc ttf::IosevkaSharpie
+#     - Add -e VERSION_TAG=vX.Y.Z to build a specific version.
 
 [buildPlans.IosevkaSharpie]
 family  = "Iosevka Sharpie"

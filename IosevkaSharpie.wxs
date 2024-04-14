@@ -1,8 +1,16 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
   <!-- https://wixtoolset.org/docs/schema/ -->
   <Package
-    Name="Iosevka Sharpie Font" Manufacturer="Jeffrey Sharp" Version="1.0.0.0"
+    Name="Iosevka Sharpie Font" Version="29.2.0.0"
+    Manufacturer="Jeffrey Sharp, Renzhi Li"
     UpgradeCode="c4e89c32-5d74-43fe-9870-b9629dd86631" UpgradeStrategy="majorUpgrade">
+
+    <MediaTemplate EmbedCab="true" CompressionLevel="high" />
+
+    <Property Id="ARPCOMMENTS"      Value="OFL-1.1 License" />
+    <Property Id="ARPURLINFOABOUT"  Value="https://typeof.net/Iosevka/" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/sharpjs/IosevkaSharpie" />
+    <Property Id="ARPHELPLINK"      Value="https://github.com/sharpjs/IosevkaSharpie/issues" />
 
     <Feature Id="Font" Title="Iosevka Sharpie Font">
       <ComponentGroupRef Id="FontFiles" />

@@ -1,0 +1,43 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package
+    Name="Iosevka Sharpie Font" Manufacturer="Jeffrey Sharp" Version="1.0.0.0"
+    UpgradeCode="c4e89c32-5d74-43fe-9870-b9629dd86631" UpgradeStrategy="majorUpgrade">
+
+    <Feature Id="Font" Title="Iosevka Sharpie Font">
+      <ComponentGroupRef Id="FontFiles" />
+    </Feature>
+
+    <StandardDirectory Id="FontsFolder" />
+
+    <ComponentGroup Id="FontFiles" Directory="FontsFolder" Source="dist\IosevkaSharpie\TTF">
+      <!-- Thin -->
+      <File Name="IosevkaSharpie-normalthinupright.ttf"       TrueType="true" />
+      <File Name="IosevkaSharpie-normalthinitalic.ttf"        TrueType="true" />
+      <!-- Extra Light -->
+      <File Name="IosevkaSharpie-normalextralightupright.ttf" TrueType="true" />
+      <File Name="IosevkaSharpie-normalextralightitalic.ttf"  TrueType="true" />
+      <!-- Light -->
+      <File Name="IosevkaSharpie-normallightupright.ttf"      TrueType="true" />
+      <File Name="IosevkaSharpie-normallightitalic.ttf"       TrueType="true" />
+      <!-- Regular -->
+      <File Name="IosevkaSharpie-normalregularupright.ttf"    TrueType="true" />
+      <File Name="IosevkaSharpie-normalregularitalic.ttf"     TrueType="true" />
+      <!-- Medium -->
+      <File Name="IosevkaSharpie-normalmediumupright.ttf"     TrueType="true" />
+      <File Name="IosevkaSharpie-normalmediumitalic.ttf"      TrueType="true" />
+      <!-- Semibold -->
+      <File Name="IosevkaSharpie-normalsemiboldupright.ttf"   TrueType="true" />
+      <File Name="IosevkaSharpie-normalsemibolditalic.ttf"    TrueType="true" />
+      <!-- Bold -->
+      <File Name="IosevkaSharpie-normalboldupright.ttf"       TrueType="true" />
+      <File Name="IosevkaSharpie-normalbolditalic.ttf"        TrueType="true" />
+      <!-- Extra Bold -->
+      <File Name="IosevkaSharpie-normalextraboldupright.ttf"  TrueType="true" />
+      <File Name="IosevkaSharpie-normalextrabolditalic.ttf"   TrueType="true" />
+      <!-- Heavy -->
+      <File Name="IosevkaSharpie-normalheavyupright.ttf"      TrueType="true" />
+      <File Name="IosevkaSharpie-normalheavyitalic.ttf"       TrueType="true" />
+    </ComponentGroup>
+
+  </Package>
+</Wix>

@@ -1,7 +1,7 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
   <!-- https://wixtoolset.org/docs/schema/ -->
   <Package
-    Name="Iosevka Sharpie Font" Version="29.2.0.0"
+    Name="Iosevka Sharpie Font" Version="29.2.1.0"
     Manufacturer="Jeffrey Sharp, Renzhi Li"
     UpgradeCode="c4e89c32-5d74-43fe-9870-b9629dd86631" UpgradeStrategy="majorUpgrade">
 

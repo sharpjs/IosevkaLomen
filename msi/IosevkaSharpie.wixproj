@@ -3,5 +3,6 @@
   <PropertyGroup>
     <BaseOutputPath>..\dist</BaseOutputPath>
     <Configurations>Release</Configurations>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 </Project>

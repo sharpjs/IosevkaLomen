@@ -18,7 +18,7 @@
 
     <StandardDirectory Id="FontsFolder" />
 
-    <ComponentGroup Id="FontFiles" Directory="FontsFolder" Source="dist\IosevkaSharpie\TTF">
+    <ComponentGroup Id="FontFiles" Directory="FontsFolder" Source="..\dist\IosevkaSharpie\TTF">
       <!-- Thin -->
       <File Name="IosevkaSharpie-normalthinupright.ttf"       TrueType="true" />
       <File Name="IosevkaSharpie-normalthinitalic.ttf"        TrueType="true" />

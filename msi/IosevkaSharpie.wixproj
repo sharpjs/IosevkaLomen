@@ -1,7 +1,7 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.0">
   <!-- https://wixtoolset.org/docs/tools/msbuild/ -->
   <PropertyGroup>
-    <BaseOutputPath>..\dist</BaseOutputPath>
+    <OutputPath>..\dist</OutputPath>
     <Configurations>Release</Configurations>
     <DebugType>none</DebugType>
   </PropertyGroup>

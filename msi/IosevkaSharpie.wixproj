@@ -1,8 +1,13 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.0">
   <!-- https://wixtoolset.org/docs/tools/msbuild/ -->
+
   <PropertyGroup>
     <OutputPath>..\dist</OutputPath>
+    <Version Condition="'$(Version)' == ''">29.2.1</Version>
+    <OutputName>$(MSBuildProjectName)-$(Version)-$(Platform)</OutputName>
     <Configurations>Release</Configurations>
     <DebugType>none</DebugType>
+    <DefineConstants>Version=$(Version)</DefineConstants>
   </PropertyGroup>
+
 </Project>

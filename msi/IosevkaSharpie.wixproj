@@ -1,13 +1,19 @@
 ﻿<Project Sdk="WixToolset.Sdk/5.0.0">
   <!-- https://wixtoolset.org/docs/tools/msbuild/ -->
 
+  <Import Project="Version.props" Condition="Exists('Version.props')" />
+
   <PropertyGroup>
     <OutputPath>..\dist</OutputPath>
-    <Version Condition="'$(Version)' == ''">29.2.1</Version>
+    <Version Condition="'$(Version)' == ''">0.0.0</Version>
     <OutputName>$(MSBuildProjectName)-$(Version)-$(Platform)</OutputName>
     <Configurations>Release</Configurations>
     <DebugType>none</DebugType>
     <DefineConstants>Version=$(Version)</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="*.props;*.ps1" />
+  </ItemGroup>
 
 </Project>
